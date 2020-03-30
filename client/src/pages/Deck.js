@@ -1,7 +1,7 @@
 import React from 'react';
 import DeckDisplay from '../components/DeckDisplay';
 import Navbar from '../components/Navbar';
-import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Deck extends React.Component {
     constructor(props) {
@@ -22,7 +22,7 @@ class Deck extends React.Component {
         return (
             <div className="grayish-white" style={{minHeight: '100%'}}>
                 <Navbar>
-                    <a className="btn">New</a>
+                    <Link to="/create" className="btn">Create</Link>
                 </Navbar>
                 <DeckDisplay auto={false} cards={this.state.cards}/>
             </div>
