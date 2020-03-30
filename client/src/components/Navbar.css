@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    border-bottom: 1px solid #54ACFF;
+    background: white;
+}
+
+.nav-logo-container {
+
+    margin-right: auto;
+}
+
+.nav-logo {
+    height: 60px;
+}
+
+.nav-content {
+    right: 0;
+}

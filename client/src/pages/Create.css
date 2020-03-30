@@ -1,0 +1,42 @@
+#add-button {
+    position: fixed;
+    background-color: #3af187;
+    padding: 20px 35px;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2px 4px 10px #888888;
+}
+
+#add-button:hover {
+    background-color: #37dd7c;
+    cursor: pointer;
+}
+
+#cross {
+    background: white;
+    height: 40px;
+    position: relative;
+    width: 5px;
+}
+
+#cross:after {
+    background: white;
+    content: "";
+    height: 5px;
+    left: -18px;
+    top: 18px;
+    position: absolute;
+    width: 40px;
+}
+
+#link {
+    background: rgb(241, 241, 241);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+}

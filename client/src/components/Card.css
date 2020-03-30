@@ -1,0 +1,106 @@
+.cards {
+    display: grid;
+}
+
+.card {
+    margin: 10px;
+    -webkit-perspective: 40rem;
+            perspective: 40rem;
+}
+
+.card-body {
+    display: -webkit-box;
+    display: flex;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition: 250ms transform;
+    transition: 250ms transform;
+}
+
+.card.auto:hover .card-body, .card.auto:focus .card-body {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+}
+
+.card-flipped .card-body {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+}
+
+.card-front, .card-back {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    min-width: 100%;
+}
+
+.card-back {
+    -webkit-transform: rotateX(-180deg) translate(-100%, 0);
+            transform: rotateX(-180deg) translate(-100%, 0);
+}
+
+body {
+    line-height: 1.3;
+    font-family: sans-serif;
+}
+
+.cards {
+    grid-gap: 1.5rem;
+    grid-auto-rows: 1fr;
+    padding: 3rem;
+    background: whitesmoke;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.card {
+    display: -webkit-box;
+    display: flex;
+    -webkit-transition: z-index, -webkit-transform calc(250ms / 4);
+    transition: z-index, -webkit-transform calc(250ms/ 4);
+    transition: z-index, transform calc(250ms / 4);
+    transition: z-index, transform calc(var(--time) / 4), -webkit-transform calc(250ms / 4);
+    -webkit-transition-delay: 250ms, 0s;
+            transition-delay: 250ms, 0s;
+    text-decoration: none;
+    color: inherit;
+    z-index: 0;
+}
+
+.card:hover {
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    z-index: 1;
+}
+
+.card:active {
+    -webkit-transform: scale(0.975);
+            transform: scale(0.975);
+}
+
+.card-body {
+    border-radius: 0.25rem;
+    -webkit-box-flex: 1;
+                flex: 1;
+}
+
+.card-front, .card-back {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border-radius: 0.35em;
+}
+
+.card-front {
+    font-size: 1.5rem;
+}
+
+.shadow, .card-front, .card-back {
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.04),
+                0 2px 2px rgba(0, 0, 0, 0.04),
+                0 4px 4px rgba(0, 0, 0, 0.04),
+                0 8px 8px rgba(0, 0, 0, 0.04),
+                0 16px 16px rgba(0, 0, 0, 0.04);
+}
