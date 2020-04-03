@@ -47,7 +47,6 @@ body {
     grid-gap: 1.5rem;
     grid-auto-rows: 1fr;
     padding: 3rem;
-    background: whitesmoke;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
