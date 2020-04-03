@@ -4,7 +4,7 @@ import './Card.css';
 
 function DeckDisplay({ cards, auto }) {
     return (
-        <div className="card-display">
+        <div className="cards">
             {cards.map((c, i) => <Card auto={auto} key={i} {...c}/>)}
         </div>
     );
